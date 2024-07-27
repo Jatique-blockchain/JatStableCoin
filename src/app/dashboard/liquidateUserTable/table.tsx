@@ -95,7 +95,7 @@ const BorrowDetailsTable = ({ borrowerAddress }: { borrowerAddress: string }) =>
                                                 <TableCell className="hidden lg:table-cell text-xs md:text-base">{formatToDollars(formatUnits(item.accumulatedInterest, 18))}</TableCell>
                                             </TableRow>
                                         </CredenzaTrigger>
-                                        <CredenzaContent>
+                                        <CredenzaContent className='overflow-y-auto max-h-[80dvh]'>
                                             <LiquidateUser
                                                 open={openCredenza === 'repayBorrow'}
                                                 onOpenChange={(open) => setOpenCredenza(open ? 'repayBorrow' : null)}

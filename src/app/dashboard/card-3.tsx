@@ -124,37 +124,7 @@ export default function Cards() {
     return (
         <div className='space-y-4'>
             <div className="grid grid-cols-1 gap-4  md:grid-cols-2 lg:grid-cols-3 ">
-                {/* {isHealthFactorLoading ? (
-                    <CardSkeleton />
-                ) : (
-                    <Card className="dark:bg-background dark:border-neutral-800">
-                        <CardHeader>
-                            <CardTitle>Health Factor</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <div className="flex items-center justify-between">
-                                <div style={{ fontSize: `${calculateFontSize(renderNumber(isBigInt(healthFactor) ? formatUnits(healthFactor, 18) : 'N/A'))}px`, fontWeight: 'bold' }}>
-                                    {renderNumber(isBigInt(healthFactor) ? formatUnits(healthFactor, 18) : 'N/A')}
-                                </div>
-                                <TrendingUpIcon className="h-6 w-6 text-green-500" />
-                            </div>
-                            <div className="text-sm text-muted-foreground dark:text-muted-foreground">+0.2 this month</div>
-                        </CardContent>
-                        <CardFooter>
-                            <Credenza open={openCredenza === 'healthFactor'} onOpenChange={(open) => setOpenCredenza(open ? 'healthFactor' : null)}>
-                                <CredenzaTrigger asChild>
-                                    <Button variant="outline">View Health Factor</Button>
-                                </CredenzaTrigger>
-                                <CredenzaContent>
-                                    <HealthFactorContent
-                                        open={openCredenza === 'healthFactor'}
-                                        onOpenChange={(open) => setOpenCredenza(open ? 'healthFactor' : null)}
-                                    />
-                                </CredenzaContent>
-                            </Credenza>
-                        </CardFooter>
-                    </Card>
-                )} */}
+
                 {isHealthFactorLoading ? (
                     <CardSkeleton />
                 ) : (
@@ -181,7 +151,7 @@ export default function Cards() {
                                 <CredenzaTrigger asChild>
                                     <Button variant="outline">View Health Factor</Button>
                                 </CredenzaTrigger>
-                                <CredenzaContent>
+                                <CredenzaContent className='overflow-y-auto max-h-[80dvh]'>
                                     <HealthFactorContent
                                         open={openCredenza === 'healthFactor'}
                                         onOpenChange={(open) => setOpenCredenza(open ? 'healthFactor' : null)}
@@ -244,7 +214,7 @@ export default function Cards() {
                                 <CredenzaTrigger asChild>
                                     <Button variant={"secondary"} className='rounded-sm bg-rose-500 text-sm'>Deposit And Borrow</Button>
                                 </CredenzaTrigger>
-                                <CredenzaContent>
+                                <CredenzaContent className='overflow-y-auto max-h-[80dvh]'>
                                     <DepositAndBorrow
                                         open={openCredenza === 'collateralDepositAndBorrow'}
                                         onOpenChange={(open) => setOpenCredenza(open ? 'collateralDepositAndBorrow' : null)} tokenToDeposit={selectedToken} />
@@ -254,7 +224,7 @@ export default function Cards() {
                                 <CredenzaTrigger asChild>
                                     <Button variant="outline" className='rounded-sm'>Deposit</Button>
                                 </CredenzaTrigger>
-                                <CredenzaContent>
+                                <CredenzaContent className='overflow-y-auto max-h-[80dvh]'>
                                     <CollateralDepositContent
                                         open={openCredenza === 'collateralDeposit'}
                                         onOpenChange={(open) => setOpenCredenza(open ? 'collateralDeposit' : null)} tokenToDeposit={selectedToken} />
@@ -297,7 +267,7 @@ export default function Cards() {
                                 <CredenzaTrigger asChild>
                                     <Button variant="outline" className='rounded-sm'>Mint Token</Button>
                                 </CredenzaTrigger>
-                                <CredenzaContent>
+                                <CredenzaContent className='overflow-y-auto max-h-[80dvh]'>
                                     <MintTokensContent
                                         open={openCredenza === 'mintToken'}
                                         onOpenChange={(open) => setOpenCredenza(open ? 'mintToken' : null)} tokenToMint={selectedToken} />
@@ -335,7 +305,7 @@ export default function Cards() {
                                 <CredenzaTrigger asChild>
                                     <Button variant="outline" className='rounded-sm'>Borrow JatCoin</Button>
                                 </CredenzaTrigger>
-                                <CredenzaContent>
+                                <CredenzaContent className='overflow-y-auto max-h-[80dvh]'>
                                     <BorrowJatCoinContent
                                         open={openCredenza === 'totalBorrowed'}
                                         onOpenChange={(open) => setOpenCredenza(open ? 'totalBorrowed' : null)}
@@ -371,7 +341,7 @@ export default function Cards() {
                                 <CredenzaTrigger asChild>
                                     <Button variant="outline" className='rounded-sm'>View Repaid</Button>
                                 </CredenzaTrigger>
-                                <CredenzaContent>
+                                <CredenzaContent className='overflow-y-auto max-h-[80dvh]'>
                                     <TotalRepaidContent
                                         open={openCredenza === 'totalRepaid'}
                                         onOpenChange={(open) => setOpenCredenza(open ? 'totalRepaid' : null)}
@@ -404,7 +374,7 @@ export default function Cards() {
                                 <CredenzaTrigger asChild>
                                     <Button variant="outline" className='rounded-sm'>View Liquidated</Button>
                                 </CredenzaTrigger>
-                                <CredenzaContent>
+                                <CredenzaContent className='overflow-y-auto max-h-[80dvh]'>
                                     <TotalLiquidatedContent
                                         open={openCredenza === 'totalLiquidated'}
                                         onOpenChange={(open) => setOpenCredenza(open ? 'totalLiquidated' : null)}
