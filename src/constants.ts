@@ -1,177 +1,169 @@
-export const JATENGINE_CONTRACT_ADDRESS = "0xeeb64e8A9c1C1efBbBeB43b083E3BB003A9eED11" as `0x${string}`;
+export const JATENGINE_CONTRACT_ADDRESS = "0x06Fd0d02EF885c8CeBC11a0E7Da198473B8E30d4" as `0x${string}`;
 //testing
 // export const JATENGINE_CONTRACT_ADDRESS = "0xe1DA8919f262Ee86f9BE05059C9280142CF23f48" as `0x${string}`;
 
 
 
 
-
-
-
-// jatique @DESKTOP-RT2E06G: ~/blockchain-development/my - blockchain - projects / jat - stable - coin$ make deploy ARGS = "--network sepolia"
+// jatique@DESKTOP-RT2E06G:~/blockchain-development/my-blockchain-projects/jat-stable-coin$ make deploy ARGS="--network sepolia"
 // [⠢] Compiling...
-// No files changed, compilation skipped
+// [⠒] Compiling 2 files with Solc 0.8.26
+// [⠑] Solc 0.8.26 finished in 3.28s
+// Compiler run successful!
 // Traces:
-// [5974830] DeployJatEngine:: run()
-//     ├─[0] VM:: envUint("PRIVATE_KEY")[staticcall]
-//     │   └─ ←[Return] < env var value>
-//     ├─[0] VM:: startBroadcast(<pk>)
-//     │   └─ ←[Return]
-//     ├─[372255] → new MockV3Aggregator@0xc41c353debecFD291401842183b3Bb18c2cD8d10
-//     │   └─ ←[Return] 1082 bytes of code
-//     ├─[372255] → new MockV3Aggregator@0x5B5Cbe5F7c7Daa9B5C92F4778dBfc179b2c77688
-//     │   └─ ←[Return] 1082 bytes of code
-//     ├─[516505] → new ERC20Mock@0x024db3Ba5D3C6701dFeb2483bEab19c5650c43f9
-//     │   ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: 0x553199572773F818170afF2e523Dc5Ef8B4D9512, value: 1000000000000000000000000000000000000[1e36])
-//     │   └─ ←[Return] 2117 bytes of code
-//     ├─[0] console:: log("this is the collateral address for wethMock", ERC20Mock: [0x024db3Ba5D3C6701dFeb2483bEab19c5650c43f9])[staticcall]
-//     │   └─ ←[Stop]
-//     ├─[516505] → new ERC20Mock@0x7520F7BaeC39b21C3a7D02724f8DCD7F19aE5052
-//     │   ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: 0x553199572773F818170afF2e523Dc5Ef8B4D9512, value: 1000000000000000000000000000000000000[1e36])
-//     │   └─ ←[Return] 2117 bytes of code
-//     ├─[0] console:: log("this is the address for wbtc mock", ERC20Mock: [0x7520F7BaeC39b21C3a7D02724f8DCD7F19aE5052])[staticcall]
-//     │   └─ ←[Stop]
-//     ├─[591661] → new JatStableCoin@0x7a8153b6e7dB830C7De155e98d1cB1C7Ff1259eb
+//   [5974830] DeployJatEngine::run()
+//     ├─ [0] VM::envUint("PRIVATE_KEY") [staticcall]
+//     │   └─ ← [Return] <env var value>
+//     ├─ [0] VM::startBroadcast(<pk>)
+//     │   └─ ← [Return] 
+//     ├─ [372255] → new MockV3Aggregator@0x8c6Cb7a3f1e4b2c147e99f5Cc45b1b373eBFF2de
+//     │   └─ ← [Return] 1082 bytes of code
+//     ├─ [372255] → new MockV3Aggregator@0x1263706c7BAf569a6bEa0a377b6f3EFa0730f827
+//     │   └─ ← [Return] 1082 bytes of code
+//     ├─ [516505] → new ERC20Mock@0x951B20DBbfA3e0546c484711b398cC5823d5fd38
+//     │   ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: 0x553199572773F818170afF2e523Dc5Ef8B4D9512, value: 1000000000000000000000000000000000000 [1e36])
+//     │   └─ ← [Return] 2117 bytes of code
+//     ├─ [0] console::log("this is the collateral address for wethMock", ERC20Mock: [0x951B20DBbfA3e0546c484711b398cC5823d5fd38]) [staticcall]
+//     │   └─ ← [Stop] 
+//     ├─ [516505] → new ERC20Mock@0xa1edd3d9F4826822749719387a1729120A80FB76
+//     │   ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: 0x553199572773F818170afF2e523Dc5Ef8B4D9512, value: 1000000000000000000000000000000000000 [1e36])
+//     │   └─ ← [Return] 2117 bytes of code
+//     ├─ [0] console::log("this is the address for wbtc mock", ERC20Mock: [0xa1edd3d9F4826822749719387a1729120A80FB76]) [staticcall]
+//     │   └─ ← [Stop] 
+//     ├─ [591661] → new JatStableCoin@0xfe0EDf0368FdC97978dE9121b8c1cC3043B97204
 //     │   ├─ emit OwnershipTransferred(previousOwner: 0x0000000000000000000000000000000000000000, newOwner: 0x553199572773F818170afF2e523Dc5Ef8B4D9512)
-//     │   └─ ←[Return] 2611 bytes of code
-//     ├─[3393454] → new JatEngine@0xeeb64e8A9c1C1efBbBeB43b083E3BB003A9eED11
+//     │   └─ ← [Return] 2611 bytes of code
+//     ├─ [3393454] → new JatEngine@0x06Fd0d02EF885c8CeBC11a0E7Da198473B8E30d4
 //     │   ├─ emit OwnershipTransferred(previousOwner: 0x0000000000000000000000000000000000000000, newOwner: 0x553199572773F818170afF2e523Dc5Ef8B4D9512)
-//     │   └─ ←[Return] 15821 bytes of code
-//     ├─[2424] JatStableCoin:: transferOwnership(JatEngine: [0xeeb64e8A9c1C1efBbBeB43b083E3BB003A9eED11])
-//     │   ├─ emit OwnershipTransferred(previousOwner: 0x553199572773F818170afF2e523Dc5Ef8B4D9512, newOwner: JatEngine: [0xeeb64e8A9c1C1efBbBeB43b083E3BB003A9eED11])
-//     │   └─ ←[Stop]
-//     ├─[0] VM:: stopBroadcast()
-//     │   └─ ←[Return]
-//     └─ ←[Return] JatStableCoin: [0x7a8153b6e7dB830C7De155e98d1cB1C7Ff1259eb], JatEngine: [0xeeb64e8A9c1C1efBbBeB43b083E3BB003A9eED11], Config({ wethUsdPriceFeed: 0xc41c353debecFD291401842183b3Bb18c2cD8d10, wbtcUsdPriceFeed: 0x5B5Cbe5F7c7Daa9B5C92F4778dBfc179b2c77688, weth: 0x024db3Ba5D3C6701dFeb2483bEab19c5650c43f9, wbtc: 0x7520F7BaeC39b21C3a7D02724f8DCD7F19aE5052, interestRate: 5 })
+//     │   └─ ← [Return] 15821 bytes of code
+//     ├─ [2424] JatStableCoin::transferOwnership(JatEngine: [0x06Fd0d02EF885c8CeBC11a0E7Da198473B8E30d4])
+//     │   ├─ emit OwnershipTransferred(previousOwner: 0x553199572773F818170afF2e523Dc5Ef8B4D9512, newOwner: JatEngine: [0x06Fd0d02EF885c8CeBC11a0E7Da198473B8E30d4])
+//     │   └─ ← [Stop] 
+//     ├─ [0] VM::stopBroadcast()
+//     │   └─ ← [Return] 
+//     └─ ← [Return] JatStableCoin: [0xfe0EDf0368FdC97978dE9121b8c1cC3043B97204], JatEngine: [0x06Fd0d02EF885c8CeBC11a0E7Da198473B8E30d4], Config({ wethUsdPriceFeed: 0x8c6Cb7a3f1e4b2c147e99f5Cc45b1b373eBFF2de, wbtcUsdPriceFeed: 0x1263706c7BAf569a6bEa0a377b6f3EFa0730f827, weth: 0x951B20DBbfA3e0546c484711b398cC5823d5fd38, wbtc: 0xa1edd3d9F4826822749719387a1729120A80FB76, interestRate: 5 })
 
 
 // Script ran successfully.
 
 // == Return ==
-//     0: contract JatStableCoin 0x7a8153b6e7dB830C7De155e98d1cB1C7Ff1259eb
-// 1: contract JatEngine 0xeeb64e8A9c1C1efBbBeB43b083E3BB003A9eED11
-// 2: struct DeployJatEngine.Config Config({ wethUsdPriceFeed: 0xc41c353debecFD291401842183b3Bb18c2cD8d10, wbtcUsdPriceFeed: 0x5B5Cbe5F7c7Daa9B5C92F4778dBfc179b2c77688, weth: 0x024db3Ba5D3C6701dFeb2483bEab19c5650c43f9, wbtc: 0x7520F7BaeC39b21C3a7D02724f8DCD7F19aE5052, interestRate: 5 })
+// 0: contract JatStableCoin 0xfe0EDf0368FdC97978dE9121b8c1cC3043B97204
+// 1: contract JatEngine 0x06Fd0d02EF885c8CeBC11a0E7Da198473B8E30d4
+// 2: struct DeployJatEngine.Config Config({ wethUsdPriceFeed: 0x8c6Cb7a3f1e4b2c147e99f5Cc45b1b373eBFF2de, wbtcUsdPriceFeed: 0x1263706c7BAf569a6bEa0a377b6f3EFa0730f827, weth: 0x951B20DBbfA3e0546c484711b398cC5823d5fd38, wbtc: 0xa1edd3d9F4826822749719387a1729120A80FB76, interestRate: 5 })
 
-//     == Logs ==
-//     this is the collateral address for wethMock 0x024db3Ba5D3C6701dFeb2483bEab19c5650c43f9
-//   this is the address for wbtc mock 0x7520F7BaeC39b21C3a7D02724f8DCD7F19aE5052
+// == Logs ==
+//   this is the collateral address for wethMock 0x951B20DBbfA3e0546c484711b398cC5823d5fd38
+//   this is the address for wbtc mock 0xa1edd3d9F4826822749719387a1729120A80FB76
 
 // ## Setting up 1 EVM.
 // ==========================
 // Simulated On-chain Traces:
 
-//   [372255] → new MockV3Aggregator@0xc41c353debecFD291401842183b3Bb18c2cD8d10
+//   [372255] → new MockV3Aggregator@0x8c6Cb7a3f1e4b2c147e99f5Cc45b1b373eBFF2de
 //     └─ ← [Return] 1082 bytes of code
 
-//   [372255] → new MockV3Aggregator@0x5B5Cbe5F7c7Daa9B5C92F4778dBfc179b2c77688
+//   [372255] → new MockV3Aggregator@0x1263706c7BAf569a6bEa0a377b6f3EFa0730f827
 //     └─ ← [Return] 1082 bytes of code
 
-//   [516505] → new ERC20Mock@0x024db3Ba5D3C6701dFeb2483bEab19c5650c43f9
+//   [516505] → new ERC20Mock@0x951B20DBbfA3e0546c484711b398cC5823d5fd38
 //     ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: 0x553199572773F818170afF2e523Dc5Ef8B4D9512, value: 1000000000000000000000000000000000000 [1e36])
 //     └─ ← [Return] 2117 bytes of code
 
-//   [516505] → new ERC20Mock@0x7520F7BaeC39b21C3a7D02724f8DCD7F19aE5052
+//   [516505] → new ERC20Mock@0xa1edd3d9F4826822749719387a1729120A80FB76
 //     ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: 0x553199572773F818170afF2e523Dc5Ef8B4D9512, value: 1000000000000000000000000000000000000 [1e36])
 //     └─ ← [Return] 2117 bytes of code
 
-//   [591661] → new JatStableCoin@0x7a8153b6e7dB830C7De155e98d1cB1C7Ff1259eb
+//   [591661] → new JatStableCoin@0xfe0EDf0368FdC97978dE9121b8c1cC3043B97204
 //     ├─ emit OwnershipTransferred(previousOwner: 0x0000000000000000000000000000000000000000, newOwner: 0x553199572773F818170afF2e523Dc5Ef8B4D9512)
 //     └─ ← [Return] 2611 bytes of code
 
-//   [3393454] → new JatEngine@0xeeb64e8A9c1C1efBbBeB43b083E3BB003A9eED11
+//   [3393454] → new JatEngine@0x06Fd0d02EF885c8CeBC11a0E7Da198473B8E30d4
 //     ├─ emit OwnershipTransferred(previousOwner: 0x0000000000000000000000000000000000000000, newOwner: 0x553199572773F818170afF2e523Dc5Ef8B4D9512)
 //     └─ ← [Return] 15821 bytes of code
 
-//   [7224] JatStableCoin::transferOwnership(JatEngine: [0xeeb64e8A9c1C1efBbBeB43b083E3BB003A9eED11])
-//     ├─ emit OwnershipTransferred(previousOwner: 0x553199572773F818170afF2e523Dc5Ef8B4D9512, newOwner: JatEngine: [0xeeb64e8A9c1C1efBbBeB43b083E3BB003A9eED11])
-//     └─ ← [Stop]
+//   [7224] JatStableCoin::transferOwnership(JatEngine: [0x06Fd0d02EF885c8CeBC11a0E7Da198473B8E30d4])
+//     ├─ emit OwnershipTransferred(previousOwner: 0x553199572773F818170afF2e523Dc5Ef8B4D9512, newOwner: JatEngine: [0x06Fd0d02EF885c8CeBC11a0E7Da198473B8E30d4])
+//     └─ ← [Stop] 
 
 
 // ==========================
 
 // Chain 11155111
 
-// Estimated gas price: 79.429147508 gwei
+// Estimated gas price: 13.378282114 gwei
 
-// Estimated total gas used for script: 8540920
+// Estimated total gas used for script: 8540937
 
-// Estimated amount required: 0.67839799453402736 ETH
+// Estimated amount required: 0.114263064703900818 ETH
 
 // ==========================
 
 // ##### sepolia
-// ✅  [Success]Hash: 0xa7a9605d94405c57ed90a17723f038bca2ddd7fe6477f0b84d7f6b716f943287
-// Contract Address: 0x5B5Cbe5F7c7Daa9B5C92F4778dBfc179b2c77688
-// Block: 6379735
-// Paid: 0.017220175580147928 ETH (446573 gas * 38.560718136 gwei)
+// ✅  [Success]Hash: 0x5f502d0115bb28dd95c63375609a5d36b96db903ee315a481d2137969882751f
+// Contract Address: 0x8c6Cb7a3f1e4b2c147e99f5Cc45b1b373eBFF2de
+// Block: 6383598
+// Paid: 0.002820429492933159 ETH (446561 gas * 6.315888519 gwei)
 
 
 // ##### sepolia
-// ✅  [Success]Hash: 0x3fca9034d58161b1f140edf914a76a68f39fe4d087745640bb32c3b32269090c
-// Contract Address: 0xc41c353debecFD291401842183b3Bb18c2cD8d10
-// Block: 6379735
-// Paid: 0.017219712851530296 ETH (446561 gas * 38.560718136 gwei)
+// ✅  [Success]Hash: 0x1a777923c9936074400940b396914c53936552581fc7b05cc2e00ee09b89ada5
+// Contract Address: 0x951B20DBbfA3e0546c484711b398cC5823d5fd38
+// Block: 6383598
+// Paid: 0.003931356388094145 ETH (622455 gas * 6.315888519 gwei)
 
 
 // ##### sepolia
-// ✅  [Success]Hash: 0x4eb91e17f53e5854de16b04ec05dfda1f466802a5f37b17eed449bf4849c05eb
-// Contract Address: 0xeeb64e8A9c1C1efBbBeB43b083E3BB003A9eED11
-// Block: 6379737
-// Paid: 0.134580243750496362 ETH (3707802 gas * 36.296502281 gwei)
+// ✅  [Success]Hash: 0x9884c4a0cf9fa3afab8dd84071e84ff73d91131e638709948fee52f5287b24ed
+// Contract Address: 0x06Fd0d02EF885c8CeBC11a0E7Da198473B8E30d4
+// Block: 6383598
+// Paid: 0.023418064082525238 ETH (3707802 gas * 6.315888519 gwei)
 
 
 // ##### sepolia
-// ✅  [Success]Hash: 0x4c1fd151511a9a47c91a448bcd662e7e8b3f0d1305202db50bf2666a95268f44
-// Block: 6379737
-// Paid: 0.001039677011336964 ETH (28644 gas * 36.296502281 gwei)
+// ✅  [Success]Hash: 0xee03688db851da87342b1bf6558e3929e5ff7c1ee90c9a9d4a00832b511b0e30
+// Contract Address: 0xa1edd3d9F4826822749719387a1729120A80FB76
+// Block: 6383598
+// Paid: 0.003931356388094145 ETH (622455 gas * 6.315888519 gwei)
 
 
 // ##### sepolia
-// ✅  [Success]Hash: 0x584c067f74f5d05ea80a72ebdb00f1e970e021e650258e01aa042fb45f904454
-// Contract Address: 0x7a8153b6e7dB830C7De155e98d1cB1C7Ff1259eb
-// Block: 6379737
-// Paid: 0.025246431423074641 ETH (695561 gas * 36.296502281 gwei)
+// ✅  [Success]Hash: 0xa60b96f25e7a61dd6b53c76ecd537b4d3e904a2a8d15103010cb8d3bbce4416c
+// Contract Address: 0xfe0EDf0368FdC97978dE9121b8c1cC3043B97204
+// Block: 6383598
+// Paid: 0.004393085734164159 ETH (695561 gas * 6.315888519 gwei)
 
 
 // ##### sepolia
-// ✅  [Success]Hash: 0x9d3850e2fda99c27c51da88cb56a424bc5ab8198bd01ca422a0e760d3fd771aa
-// Contract Address: 0x7520F7BaeC39b21C3a7D02724f8DCD7F19aE5052
-// Block: 6379737
-// Paid: 0.022592939327319855 ETH (622455 gas * 36.296502281 gwei)
+// ✅  [Success]Hash: 0x1dea68c2ed4afe974393b566cf620916c81b52a3277d6319a591dc94b88003da
+// Contract Address: 0x1263706c7BAf569a6bEa0a377b6f3EFa0730f827
+// Block: 6383598
+// Paid: 0.002820505283595387 ETH (446573 gas * 6.315888519 gwei)
 
 
 // ##### sepolia
-// ✅  [Success]Hash: 0x85d403023aae722fa453bd6c9afeafd96fee4c49348ad3ecd28edb8bf51c1d35
-// Contract Address: 0x024db3Ba5D3C6701dFeb2483bEab19c5650c43f9
-// Block: 6379737
-// Paid: 0.022592939327319855 ETH (622455 gas * 36.296502281 gwei)
+// ✅  [Success]Hash: 0x29f8f8759cfafe1039b84c0f654c2a6dca35a19c41aa6dbaade1e5a3ff8a6d50
+// Block: 6383598
+// Paid: 0.000180988101400464 ETH (28656 gas * 6.315888519 gwei)
 
-// ✅ Sequence #1 on sepolia | Total Paid: 0.240492119271225901 ETH (6570051 gas * avg 36.943421096 gwei)
-
+// ✅ Sequence #1 on sepolia | Total Paid: 0.041495785470806697 ETH (6570063 gas * avg 6.315888519 gwei)
+                                                                                                                                                                                 
 
 // ==========================
 
 // ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
 // ##
 // Start verification for (6) contracts
-// Start verifying contract `0xc41c353debecFD291401842183b3Bb18c2cD8d10` deployed on sepolia
+// Start verifying contract `0x8c6Cb7a3f1e4b2c147e99f5Cc45b1b373eBFF2de` deployed on sepolia
 
-// Submitting verification for [test/mocks/MockV3Aggregator.sol:MockV3Aggregator] 0xc41c353debecFD291401842183b3Bb18c2cD8d10.
+// Submitting verification for [test/mocks/MockV3Aggregator.sol:MockV3Aggregator] 0x8c6Cb7a3f1e4b2c147e99f5Cc45b1b373eBFF2de.
+
+// Submitting verification for [test/mocks/MockV3Aggregator.sol:MockV3Aggregator] 0x8c6Cb7a3f1e4b2c147e99f5Cc45b1b373eBFF2de.
+
+// Submitting verification for [test/mocks/MockV3Aggregator.sol:MockV3Aggregator] 0x8c6Cb7a3f1e4b2c147e99f5Cc45b1b373eBFF2de.
 // Submitted contract for verification:
 //         Response: `OK`
-//         GUID: `4ty9ugfwzv3t9u485p6eqphj5gfu7k1vn7qhgqdx7rz4wut3wu`
-//         URL: https://sepolia.etherscan.io/address/0xc41c353debecfd291401842183b3bb18c2cd8d10
-// Contract verification status:
-// Response: `OK`
-// Details: `Pass - Verified`
-// Contract successfully verified
-// Start verifying contract `0x5B5Cbe5F7c7Daa9B5C92F4778dBfc179b2c77688` deployed on sepolia
-
-// Submitting verification for [test/mocks/MockV3Aggregator.sol:MockV3Aggregator] 0x5B5Cbe5F7c7Daa9B5C92F4778dBfc179b2c77688.
-// Submitted contract for verification:
-//         Response: `OK`
-//         GUID: `bs7yefle5erkqdu7624nrfbzyypdqcdcydj8ppuavdkz7m2m9p`
-//         URL: https://sepolia.etherscan.io/address/0x5b5cbe5f7c7daa9b5c92f4778dbfc179b2c77688
+//         GUID: `kfkv2ggjrnihursksasaktxhjkpdgyxxp35jgftyhs2wbmzzsx`
+//         URL: https://sepolia.etherscan.io/address/0x8c6cb7a3f1e4b2c147e99f5cc45b1b373ebff2de
 // Contract verification status:
 // Response: `NOTOK`
 // Details: `Pending in queue`
@@ -179,55 +171,69 @@ export const JATENGINE_CONTRACT_ADDRESS = "0xeeb64e8A9c1C1efBbBeB43b083E3BB003A9
 // Response: `NOTOK`
 // Details: `Already Verified`
 // Contract source code already verified
-// Start verifying contract `0x024db3Ba5D3C6701dFeb2483bEab19c5650c43f9` deployed on sepolia
+// Start verifying contract `0x1263706c7BAf569a6bEa0a377b6f3EFa0730f827` deployed on sepolia
 
-// Submitting verification for [test/mocks/ERC20Mock.sol:ERC20Mock] 0x024db3Ba5D3C6701dFeb2483bEab19c5650c43f9.
+// Submitting verification for [test/mocks/MockV3Aggregator.sol:MockV3Aggregator] 0x1263706c7BAf569a6bEa0a377b6f3EFa0730f827.
 // Submitted contract for verification:
 //         Response: `OK`
-//         GUID: `nrzzdwhysgr8pu1emcumhhzttdjbtkw3wtencr1nrhnnjnpszt`
-//         URL: https://sepolia.etherscan.io/address/0x024db3ba5d3c6701dfeb2483beab19c5650c43f9
+//         GUID: `hvsm8ij3cghudiqkurm9emgkttr2hxlqlarcx3um1e3cfnejfq`
+//         URL: https://sepolia.etherscan.io/address/0x1263706c7baf569a6bea0a377b6f3efa0730f827
 // Contract verification status:
 // Response: `NOTOK`
 // Details: `Pending in queue`
-// Contract verification status:
-// Response: `OK`
-// Details: `Pass - Verified`
-// Contract successfully verified
-// Start verifying contract `0x7520F7BaeC39b21C3a7D02724f8DCD7F19aE5052` deployed on sepolia
-
-// Submitting verification for [test/mocks/ERC20Mock.sol:ERC20Mock] 0x7520F7BaeC39b21C3a7D02724f8DCD7F19aE5052.
-// Submitted contract for verification:
-//         Response: `OK`
-//         GUID: `sqjn65r67qcx5hjnenec2vcfm1ulaeqtcaj7j8maw7jcbucg4m`
-//         URL: https://sepolia.etherscan.io/address/0x7520f7baec39b21c3a7d02724f8dcd7f19ae5052
 // Contract verification status:
 // Response: `NOTOK`
 // Details: `Already Verified`
 // Contract source code already verified
-// Start verifying contract `0x7a8153b6e7dB830C7De155e98d1cB1C7Ff1259eb` deployed on sepolia
+// Start verifying contract `0x951B20DBbfA3e0546c484711b398cC5823d5fd38` deployed on sepolia
 
-// Submitting verification for [src/JatStableCoin.sol:JatStableCoin] 0x7a8153b6e7dB830C7De155e98d1cB1C7Ff1259eb.
+// Submitting verification for [test/mocks/ERC20Mock.sol:ERC20Mock] 0x951B20DBbfA3e0546c484711b398cC5823d5fd38.
 // Submitted contract for verification:
 //         Response: `OK`
-//         GUID: `9temrvde16a6wtzajvncev15gvcbwtnehnwxpqipu67fzqasc2`
-//         URL: https://sepolia.etherscan.io/address/0x7a8153b6e7db830c7de155e98d1cb1c7ff1259eb
+//         GUID: `t8dhtue6tfshm6vthusdesxz9zj556ehnrdddwhwpraeviix7n`
+//         URL: https://sepolia.etherscan.io/address/0x951b20dbbfa3e0546c484711b398cc5823d5fd38
 // Contract verification status:
 // Response: `NOTOK`
 // Details: `Pending in queue`
 // Contract verification status:
-// Response: `OK`
-// Details: `Pass - Verified`
-// Contract successfully verified
-// Start verifying contract `0xeeb64e8A9c1C1efBbBeB43b083E3BB003A9eED11` deployed on sepolia
+// Response: `NOTOK`
+// Details: `Already Verified`
+// Contract source code already verified
+// Start verifying contract `0xa1edd3d9F4826822749719387a1729120A80FB76` deployed on sepolia
 
-// Submitting verification for [src/JatEngine.sol:JatEngine] 0xeeb64e8A9c1C1efBbBeB43b083E3BB003A9eED11.
+// Submitting verification for [test/mocks/ERC20Mock.sol:ERC20Mock] 0xa1edd3d9F4826822749719387a1729120A80FB76.
 // Submitted contract for verification:
 //         Response: `OK`
-//         GUID: `t2uagfukkafgu6c95ggb1946v631dhbqm3yiqpndcauucqlmam`
-//         URL: https://sepolia.etherscan.io/address/0xeeb64e8a9c1c1efbbbeb43b083e3bb003a9eed11
+//         GUID: `6khsc2ae9tba2mbakwtspdcvqphidrhmxhzurvfctykpldqd4l`
+//         URL: https://sepolia.etherscan.io/address/0xa1edd3d9f4826822749719387a1729120a80fb76
 // Contract verification status:
 // Response: `NOTOK`
 // Details: `Pending in queue`
+// Contract verification status:
+// Response: `NOTOK`
+// Details: `Already Verified`
+// Contract source code already verified
+// Start verifying contract `0xfe0EDf0368FdC97978dE9121b8c1cC3043B97204` deployed on sepolia
+
+// Submitting verification for [src/JatStableCoin.sol:JatStableCoin] 0xfe0EDf0368FdC97978dE9121b8c1cC3043B97204.
+// Submitted contract for verification:
+//         Response: `OK`
+//         GUID: `xnweytymbnjs2hbqcjnhkqfrqqsnjdq4fsuuhji7mdktsbx4dn`
+//         URL: https://sepolia.etherscan.io/address/0xfe0edf0368fdc97978de9121b8c1cc3043b97204
+// Contract verification status:
+// Response: `NOTOK`
+// Details: `Pending in queue`
+// Contract verification status:
+// Response: `NOTOK`
+// Details: `Already Verified`
+// Contract source code already verified
+// Start verifying contract `0x06Fd0d02EF885c8CeBC11a0E7Da198473B8E30d4` deployed on sepolia
+
+// Submitting verification for [src/JatEngine.sol:JatEngine] 0x06Fd0d02EF885c8CeBC11a0E7Da198473B8E30d4.
+// Submitted contract for verification:
+//         Response: `OK`
+//         GUID: `2frn1yzep91j4ypgd9ph7urfk75nzpspbnbkdsrmkdua6cam4b`
+//         URL: https://sepolia.etherscan.io/address/0x06fd0d02ef885c8cebc11a0e7da198473b8e30d4
 // Contract verification status:
 // Response: `OK`
 // Details: `Pass - Verified`
@@ -238,4 +244,4 @@ export const JATENGINE_CONTRACT_ADDRESS = "0xeeb64e8A9c1C1efBbBeB43b083E3BB003A9
 
 // Sensitive values saved to: /home/jatique/blockchain-development/my-blockchain-projects/jat-stable-coin/cache/DeployJatEngine.s.sol/11155111/run-latest.json
 
-// jatique@DESKTOP-RT2E06G:~/blockchain-development/my-blockchain-projects/jat-stable-coin$
+// jatique@DESKTOP-RT2E06G:~/blockchain-development/my-blockchain-projects/jat-stable-coin$ 
